@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_appacheur_invoice_follow,appacheur.invoice.follow,model_account_invoice,group_agent_recouvrement,1,0,0,0
+access_appacheur_invoice_stage_follow,appacheur.invoice.stage.follow,model_account_invoice_stage,group_agent_recouvrement,1,1,1,1
+access_appacheur_invoice_stage,appacheur.invoice.stage,model_account_invoice_stage,account.group_account_invoice,1,1,1,1
+
+
+access_account_invoice_line_finvoice,account.invoice.line,account.model_account_invoice_line,group_agent_recouvrement,1,0,0,0
+access_account_invoice_tax_finvoice,account.invoice.tax,account.model_account_invoice_tax,group_agent_recouvrement,1,0,0,0
+
+access_appacheur_invoice_report_follow_rec,appacheur.invoice.report.follow.rec,model_account_invoice_report_follow,group_agent_recouvrement,1,0,0,0
+access_appacheur_invoice_report_follow,appacheur.invoice.report.follow,model_account_invoice_report_follow,account.group_account_invoice,1,0,0,0
+

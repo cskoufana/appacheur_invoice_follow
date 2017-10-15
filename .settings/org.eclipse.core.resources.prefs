@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//models/account_invoice.py=utf-8
+encoding//report/account_invoice_report.py=utf-8
+encoding/__manifest__.py=utf-8

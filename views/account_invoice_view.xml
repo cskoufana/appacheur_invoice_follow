@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--Account invoice-->
+        <record id="view_invoice_form_appacheur_inherit" model="ir.ui.view">
+            <field name="name">view.account.invoice.form.appacheur.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form" />
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//button[@name='action_invoice_open']" position="after">
+                        <!--<button name="invoice_open" states="approval1" string="Validate" class="oe_highlight" groups="base.group_user"/>-->
+                        <button name="invoice_follow_validate" type="object"   attrs="{'invisible':[('state2', 'in', ('open5','paid'))]}" string="Avancé" class="oe_highlight o_invoice_validate" 
+                        	groups="appacheur_invoice_follow.group_agent_recouvrement"/>
+                    </xpath>
+                    <xpath expr="//field[@name='state']" position="replace">
+                        <field name="state" attrs="{'invisible':[('state', 'in', ('open','paid'))]}" widget="statusbar" nolabel="1" statusbar_visible="draft,open,paid"/>
+            			<field name="state2" attrs="{'invisible':[('state', 'not in', ('open','paid'))]}" widget="statusbar" nolabel="1" statusbar_visible="open0,open1,open2,open3,open4,open5" 
+                              groups="account.group_account_invoice"  />
+                        <field name="state2" attrs="{'invisible':[('state', 'not in', ('open','draft','paid'))]}" widget="statusbar" 
+                        groups="appacheur_invoice_follow.group_agent_recouvrement" nolabel="1" statusbar_visible="open0,open1,open2,open3,open4,open5" 
+                        />
+                    </xpath>
+                    <xpath expr="//field[@name='fiscal_position_id']" position="after">
+                        <field name="analytic_account_id" />
+                    </xpath>
+                    <notebook position="inside">
+                        <page string="Stages">
+                            <field name="stage_ids" readonly="0" >
+                                <tree create="false" delete="false">
+                                    <field name="name" />
+                                    <field name="date_start" />
+                                    <field name="delay" />
+                                    <field name="date_end" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </data>
+            </field>
+        </record>
+         <record id="invoice_kanban_appacheur" model="ir.ui.view">
+            <field name="name">account.invoice.kanban.appacheur</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='state'][2]" position="replace">
+                	<field name="state" widget="label_selection" 
+                		attrs="{'invisible':[('state', 'in', ('open','draft','paid')),('type','=','out_invoice')]}"
+                		options="{'classes': {'draft': 'default', 'cancel': 'default', 'none': 'danger', 'open': 'warning','paid': 'success'}}"/>
+                	<field name="state2" widget="label_selection" 
+                	attrs="{'invisible':['|',('state', 'not in', ('open','draft','paid')),('type','!=','out_invoice')]}"
+                		options="{'classes': {'draft': 'default', 'cancel': 'default', 'none': 'danger', 'open': 'warning','paid': 'success'}}"/>
+            	</xpath>
+            </field>
+        </record>
+
+        <record id="view_account_invoice_filter_appacheur" model="ir.ui.view">
+            <field name="name">account.invoice.filter.appacheur</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                      <field name="analytic_account_id" operator="child_of" />
+                      <field name="invoice_line_ids" string="Account Analytic Name" filter_domain="[('invoice_line_ids.account_analytic_id.name','ilike',self)]" />
+                      <separator />
+                      <field name="invoice_line_ids" string="Account analytic Id" filter_domain="[('invoice_line_ids.account_analytic_id.id','=',self)]" />
+                      <separator />
+                      <field name="invoice_line_ids" string="Product" filter_domain="[('invoice_line_ids.product_id.name','ilike',self)]" />
+               </xpath>
+            </field>
+        </record>
+        
+        
+        <!-- Top menu item -->
+        <menuitem name="Invoicing"
+            id="account.menu_finance"
+            groups="account.group_account_user,account.group_account_manager,account.group_account_invoice,appacheur_invoice_follow.group_agent_recouvrement"
+            web_icon="account_invoicing,static/description/icon.png"
+            sequence="40"/>
+        
+        <menuitem id="account.menu_finance_receivables"
+            groups="account.group_account_user,account.group_account_manager,account.group_account_invoice,appacheur_invoice_follow.group_agent_recouvrement"
+             name="Sales" parent="account.menu_finance" sequence="2"/>    
+             
+             
+        <menuitem id="account.menu_finance_payables" name="Purchases" parent="account.menu_finance" 
+        groups="account.group_account_user,account.group_account_manager,account.group_account_invoice"
+         sequence="3"/>        
+                       
+
+    </data>
+</openerp>

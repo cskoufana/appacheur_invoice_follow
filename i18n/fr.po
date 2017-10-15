@@ -1,0 +1,481 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* appacheur_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-12 16:47+0000\n"
+"PO-Revision-Date: 2017-10-13 13:46+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.0.4\n"
+
+#. module: appacheur_account
+#: model:ir.model.fields,help:appacheur_account.field_account_invoice_state2
+msgid ""
+" * The 'Draft' status is used when a user is encoding a new and unconfirmed Invoice.             \n"
+"* The 'Pro-forma' when invoice is in Pro-forma status,invoice does not have an invoice number.             \n"
+"* The 'Open' status is used when user create invoice,a invoice number is generated.Its in open status till user does not pay invoice.             \n"
+"* The 'Paid' status is set automatically when the invoice is paid. Its related journal entries may or may not be reconciled.             \n"
+"* The 'Cancelled' status is used when user cancel invoice."
+msgstr ""
+" * The 'Draft' status is used when a user is encoding a new and unconfirmed Invoice.             \n"
+"* The 'Pro-forma' when invoice is in Pro-forma status,invoice does not have an invoice number.             \n"
+"* The 'Open' status is used when user create invoice,a invoice number is generated.Its in open status till user does not pay invoice.             \n"
+"* The 'Paid' status is set automatically when the invoice is paid. Its related journal entries may or may not be reconciled.             \n"
+"* The 'Cancelled' status is used when user cancel invoice."
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_filter_appacheur
+msgid "Account Analytic Name"
+msgstr "Nom du compte analytique"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_filter_appacheur
+msgid "Account analytic Id"
+msgstr "Id du compte analytique"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_validation_level
+msgid "Accounting validation level"
+msgstr "Niveau de création des écritures"
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_bank_statement.py:77
+#, python-format
+msgid "All the account entries lines must be processed in order to close the statement."
+msgstr "All the account entries lines must be processed in order to close the statement."
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Analytic Account"
+msgstr "Compte analytique"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_analytic_account_id
+msgid "Analytic account"
+msgstr "Compte Analytique"
+
+#. module: appacheur_account
+#: selection:account.invoice.report.follow,state2:0
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Company"
+msgstr "Société"
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_bank_statement.py:58
+#, python-format
+msgid "Configuration Error!"
+msgstr "Erreur de configuration !"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Credit Note"
+msgstr "Avoir"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Customer"
+msgstr "Client"
+
+#. module: appacheur_account
+#: model:ir.model,name:appacheur_account.model_account_invoice_stage
+msgid "Customer invoice stage"
+msgstr "Etat facture client"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Date"
+msgstr "Date "
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_date_end
+msgid "Date end"
+msgstr "Date fin"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_date_start
+msgid "Date start"
+msgstr "Date debut"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_default
+msgid "Default for invoices"
+msgstr "Default for invoices"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_delay
+msgid "Delay (Days)"
+msgstr "Delail (jour)"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_report_follow_display_name
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_display_name
+msgid "Display Name"
+msgstr "affichage nom"
+
+#. module: appacheur_account
+#: selection:account.invoice,state2:0
+#: selection:account.invoice.report.follow,state2:0
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Draft Invoices"
+msgstr "Factures en brouillon"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Due Month"
+msgstr "Mois d'échéance"
+
+#. module: appacheur_account
+#: selection:account.invoice,state2:0
+#: selection:account.invoice,validation_level:0
+#: selection:account.invoice.stage,state:0
+msgid "Engineer market"
+msgstr "Ingénieur du marché"
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_bank_statement.py:28
+#: code:addons/appacheur_account/models/account_bank_statement.py:33
+#: code:addons/appacheur_account/models/account_bank_statement.py:61
+#: code:addons/appacheur_account/models/account_bank_statement.py:77
+#: code:addons/appacheur_account/wizard/pos_box.py:37
+#: code:addons/appacheur_account/wizard/pos_box.py:74
+#, python-format
+msgid "Error!"
+msgstr "Erreur!"
+
+#. module: appacheur_account
+#: model:ir.actions.act_window,help:appacheur_account.action_account_invoice_report_follow_all_supp
+msgid "From this report, you can have an overview of the amount invoiced from your vendors. The search tool can also be used to personalise your Invoices reports and so, match this analysis to your needs."
+msgstr "Dans ce rapport, vous avez un aperçu du montant facturé par vos fournisseurs. L'outil de recherche peut aussi être utilisé pour personnaliser  les rapports de facturation afin qu'ils soient adaptés à vos besoins."
+
+#. module: appacheur_account
+#: model:ir.actions.act_window,help:appacheur_account.action_account_invoice_report_follow_all
+msgid "From this report, you can have an overview of the amount invoiced to your customers. The search tool can also be used to personalise your Invoices reports and so, match this analysis to your needs."
+msgstr "À partir de ce rapport, vous avez un aperçu du montant facturé à votre client. L'outil de recherche peut aussi être utilisé pour personnaliser l'analyse des factures, et ainsi mieux correspondre à vos besoins."
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_report_follow_id
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_id
+msgid "ID"
+msgstr "ID"
+
+#. module: appacheur_account
+#: model:ir.model,name:appacheur_account.model_account_invoice
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_invoice_id
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_report_follow_state2
+msgid "Invoice Status"
+msgstr "État de la facture"
+
+#. module: appacheur_account
+#: model:ir.actions.act_window,name:appacheur_account.act_account_invoice_follow_partner_relation
+msgid "Invoice by State"
+msgstr "Facture par etat"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Invoiced"
+msgstr "Facturée"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Invoices Analysis"
+msgstr "Analyse des factures"
+
+#. module: appacheur_account
+#: model:ir.actions.act_window,name:appacheur_account.action_account_invoice_report_follow_all
+#: model:ir.actions.act_window,name:appacheur_account.action_account_invoice_report_follow_all_supp
+#: model:ir.ui.menu,name:appacheur_account.menu_action_account_invoice_report_follow_all
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_graph
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_pivot
+msgid "Invoices Follow"
+msgstr "Suivi des factures"
+
+#. module: appacheur_account
+#: model:ir.model,name:appacheur_account.model_account_invoice_report_follow
+msgid "Invoices Payment follow"
+msgstr "Suivi des paiements factures"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Journal invoices with period in current year"
+msgstr "Ecritures de facturation avec une période sur l'exercice en cours"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_report_follow___last_update
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage___last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Last Month"
+msgstr "Le mois dernier"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Level"
+msgstr "Niveau"
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_bank_statement.py:19
+#: code:addons/appacheur_account/models/account_bank_statement.py:26
+#, python-format
+msgid "Loss"
+msgstr "Perdu"
+
+#. module: appacheur_account
+#: selection:account.invoice,state2:0
+#: selection:account.invoice,validation_level:0
+#: selection:account.invoice.stage,state:0
+msgid "MINMAP"
+msgstr "MINMAP"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "My Invoices"
+msgstr "Mes factures"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_name
+msgid "Name"
+msgstr "Nom"
+
+#. module: appacheur_account
+#: selection:account.invoice.report.follow,state2:0
+msgid "Open"
+msgstr "Ouvert"
+
+#. module: appacheur_account
+#: selection:account.invoice,state2:0
+#: selection:account.invoice.report.follow,state2:0
+msgid "Paid"
+msgstr "Payé"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: appacheur_account
+#: selection:account.invoice,state2:0
+#: selection:account.invoice,validation_level:0
+msgid "Pending payment"
+msgstr "Paiement en attente"
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/wizard/pos_box.py:75
+#, python-format
+msgid "Please define expense account for this product: \"%s\" (id:%d)."
+msgstr "Please define expense account for this product: \"%s\" (id:%d)."
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/wizard/pos_box.py:38
+#, python-format
+msgid "Please define income account for this product: \"%s\" (id:%d)."
+msgstr "Please define income account for this product: \"%s\" (id:%d)."
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_bank_statement.py:58
+#, python-format
+msgid "Please verify that an account is defined in the journal."
+msgstr "Please verify that an account is defined in the journal."
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_filter_appacheur
+msgid "Product"
+msgstr "Article"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Product Category"
+msgstr "Catégorie d'article"
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_bank_statement.py:19
+#: code:addons/appacheur_account/models/account_bank_statement.py:31
+#, python-format
+msgid "Profit"
+msgstr "Profit"
+
+#. module: appacheur_account
+#: selection:account.invoice,state2:0
+#: selection:account.invoice,validation_level:0
+#: selection:account.invoice.stage,state:0
+msgid "Project leader"
+msgstr "Chef de projet"
+
+#. module: appacheur_account
+#: selection:account.invoice,state2:0
+#: selection:account.invoice,validation_level:0
+#: selection:account.invoice.stage,state:0
+msgid "Project manager"
+msgstr "Maitre d'ouvrage"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Salesperson"
+msgstr "Vendeur"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: appacheur_account
+#: selection:account.invoice,state2:0
+#: selection:account.invoice,validation_level:0
+#: selection:account.invoice.stage,state:0
+msgid "Service manager"
+msgstr "Chef service"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_ids
+#: model:ir.ui.view,arch_db:appacheur_account.view_invoice_form_appacheur_inherit
+msgid "Stages"
+msgstr "Etapes"
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_stage_state
+msgid "State"
+msgstr "Statut"
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_bank_statement.py:82
+#, python-format
+msgid "Statement %s confirmed, journal items were created."
+msgstr "Statement %s confirmed, journal items were created."
+
+#. module: appacheur_account
+#: model:ir.model.fields,field_description:appacheur_account.field_account_invoice_state2
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Status"
+msgstr "État"
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_invoice.py:163
+#, python-format
+msgid "Step %s of the invoice %s has exceeded the time limit."
+msgstr "Step %s of the invoice %s has exceeded the time limit."
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_bank_statement.py:61
+#, python-format
+msgid "The account entries lines are not in valid state."
+msgstr "The account entries lines are not in valid state."
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_voucher.py:276
+#, python-format
+msgid "The invoice you are willing to pay is not valid anymore."
+msgstr "The invoice you are willing to pay is not valid anymore."
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_bank_statement.py:28
+#, python-format
+msgid "There is no Loss Account on the journal %s."
+msgstr "There is no Loss Account on the journal %s."
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_bank_statement.py:33
+#, python-format
+msgid "There is no Profit Account on the journal %s."
+msgstr "There is no Profit Account on the journal %s."
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "This Month"
+msgstr "Ce mois"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "This Year"
+msgstr "Cette année"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "To Invoice"
+msgstr "À facturer"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_filter_appacheur
+msgid "Unpaid"
+msgstr "Non payé"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_filter_appacheur
+msgid "Unpaid Invoices"
+msgstr "Factures impayées"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_invoice_form_appacheur_inherit
+msgid "Validate"
+msgstr "Validé"
+
+#. module: appacheur_account
+#: model:ir.ui.view,arch_db:appacheur_account.view_account_invoice_report_follow_search
+msgid "Vendor"
+msgstr "Fournisseur"
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_voucher.py:276
+#, python-format
+msgid "Wrong voucher line"
+msgstr "ligne de paiement incorrecte"
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_invoice.py:50
+#, python-format
+msgid "You cannot validate an invoice with a negative total amount. You should create a credit note instead."
+msgstr "You cannot validate an invoice with a negative total amount. You should create a credit note instead."
+
+#. module: appacheur_account
+#: code:addons/appacheur_account/models/account_voucher.py:348
+#, python-format
+msgid "change"
+msgstr "change"
